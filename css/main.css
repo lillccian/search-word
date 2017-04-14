@@ -1,0 +1,40 @@
+.postbox {
+  min-height: 440px;
+  padding: 20px 10px;
+}
+
+.postbox_inner {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+}
+.postbox_inner:hover .img {
+  transition: 0.4s;
+  background-size: 110% auto;
+  background-position: center center;
+}
+.postbox_inner .img {
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 200px;
+  background-size: 100% auto;
+  background-position: center center;
+  transition: 0.4s;
+}
+.postbox_inner h4 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+}
+.postbox_inner p {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.hightlight {
+  color: #fff;
+  background-color: #f24;
+  padding: 0 5px;
+}
+
+/*# sourceMappingURL=main.css.map */

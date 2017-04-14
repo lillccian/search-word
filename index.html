@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Word</title>
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vue.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+	<div id="app" class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<br>
+				<input class="form-control" type="text" v-model="filter" placeholder="關鍵字">
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12">
+				<h4>總共有{{filtered_post.length}}篇文章</h4>
+			</div>
+		</div>
+		<div class="row">
+			<postbox :post="p" v-for="p in filtered_post"></postbox>
+		</div>
+	</div>
+	<template id="post">
+		<div class="postbox col-sm-4">
+			<div class="postbox_inner">
+				<div class="img" :style="covercss"></div>
+				<h6 v-html="post.name_short"></h6>
+				<h4 v-html="post.title"></h4>
+				<p v-html="post.description"></p>
+			</div>
+		</div>
+	</template>
+	<script src="js/main.js"></script>
+</body>
+</html>
